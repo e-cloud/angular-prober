@@ -1,0 +1,22 @@
+{
+  "name": "angular-prober",
+  "version": "0.0.1",
+  "description": "chrome extension for inspecting Angular apps",
+  "main": "devtoolsBackground.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e-cloud/angular-prober.git"
+  },
+  "keywords": [
+    "angular",
+    "probe",
+    "chrome",
+    "extension"
+  ],
+  "author": "e-cloud <saintscott119@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/e-cloud/angular-prober/issues"
+  },
+  "homepage": "https://github.com/e-cloud/angular-prober"
+}
