@@ -1,6 +1,6 @@
 {
   "name": "Angular Prober",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Extends the Developer Tools, adding tools for inspecting component context of Angular applications.",
   "devtools_page": "devtoolsBackground.html",
   "manifest_version": 2,
@@ -9,9 +9,9 @@
     "<all_urls>"
   ],
   "icons": {
-    "16": "img/angular.svg",
-    "48": "img/angular.svg",
-    "128": "img/angular.svg"
+    "16": "img/angular.png",
+    "48": "img/angular.png",
+    "128": "img/angular.png"
   },
   "page_action": {
     "default_icon": {

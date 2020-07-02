@@ -15,14 +15,30 @@ function getPanelContents() {
   const panelContents = Object.create(null);
 
   const hasAngular = angular && angular.probe
+  const hasAngular9 = angular && angular.applyChanges
 
-  if (hasAngular && $0) {
-    const context = angular.probe($0);
-    if (context) {
-      // Get sidebar contents
-      Object.assign(panelContents, context._debugContext.context)
-      panelContents.__debugContext = context._debugContext
-      panelContents.__debugElement = context
+  if ($0) {
+    if (hasAngular) {
+      const context = angular.probe($0);
+      if (context) {
+        // Get sidebar contents
+        Object.assign(panelContents, context._debugContext.context)
+        panelContents.__debugContext = context._debugContext
+        panelContents.__debugElement = context
+        return panelContents;
+      }
+    }
+
+    if (hasAngular9) {
+      panelContents.__Context = ng.getContext($0)
+      panelContents.__Component = ng.getComponent($0)
+      panelContents.__Directives = ng.getDirectives($0)
+      panelContents.__Host = ng.getHostElement($0)
+      panelContents.__Injector = ng.getInjector($0)
+      panelContents.__Component = ng.getComponent($0)
+      panelContents.__Listeners = ng.getListeners($0)
+      panelContents.__OwningComponent = ng.getOwningComponent($0)
+      panelContents.__RootComponents = ng.getRootComponents($0)
       return panelContents
     }
   }
